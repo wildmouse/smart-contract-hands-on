@@ -10,7 +10,7 @@ contract OnChainParamNFT is ERC721 {
 
     mapping(uint256 => bytes32) public tokenParameters;
 
-    constructor() ERC721("OnChainParamNFT", "OCN") {}
+    constructor() ERC721("OnChainParamNFT", "OCP") {}
 
     function mintNFT(uint256 tokenId) public {
         bytes32 tokenParameter = generateParameter(tokenId);
@@ -29,7 +29,9 @@ contract OnChainParamNFT is ERC721 {
 
         bytes32 tokenParameter = tokenParameters[tokenId];
         return string(abi.encodePacked(
-                "http://ipfs.io/ipfs/[gen_art_cid]?seed=",
+                'https://ccbt.infura-ipfs.io/ipfs/' 
+                'QmXsBxv5Ec2okLL7oBjdsm1Rqoa7LyBBzzry7sscfM37YF/'
+                'hands-on-gen-art/?seed="',
                 uint256(tokenParameter).toHexString()
             )
         );
