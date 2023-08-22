@@ -31,7 +31,7 @@ contract OnChainParamNFT is ERC721 {
         return string(abi.encodePacked(
                 'https://ccbt.infura-ipfs.io/ipfs/' 
                 'QmXsBxv5Ec2okLL7oBjdsm1Rqoa7LyBBzzry7sscfM37YF/'
-                'hands-on-gen-art/?seed="',
+                'hands-on-gen-art/?seed=',
                 uint256(tokenParameter).toHexString()
             )
         );

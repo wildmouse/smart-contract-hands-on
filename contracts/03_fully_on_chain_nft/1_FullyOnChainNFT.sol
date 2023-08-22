@@ -7,4 +7,4 @@ contract FullyOnChainNFT is ERC721 {
 
     constructor() ERC721("FullyOnChainNFT", "FOC") {}
 
-} 
+}
